@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding: 0 ;
+  box-sizing: border-box
+}
+
+body{
+  background-image: url("../assets/images/download.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(82, 68, 68, 0.5); /* Adjust the color and opacity as needed */
+  z-index: -1; /* Place the overlay below other elements */
+}
+.app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.main{
+  background-color: rgb(161, 143, 121);
+  width: 25%;
+  padding:1.5rem;
+  border-radius: 1rem;
+  height: 70%;
+  /* flex-wrap: wrap; */
+  overflow-y: scroll;
+}
+
+.todo{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  /* padding: 5%; */
+  margin-bottom: 1rem;
+border-radius: 0.5rem;
+cursor: pointer;
+}
+
+.todo:hover{
+  opacity: 0.8;
+}
+
+.inner_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+  width: 90%;
+  padding: 1rem;
+}
+ 
+.text{
+  width:90%;
+}
+
+.delete{
+  margin-right: 2rem;
+}
+
+input[type="checkbox"].checkbox {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.6rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 100%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"].checkbox:checked {
+  /* Style for when the checkbox is checked */
+  background-color: burlywood;
+}
+
+input[type="checkbox"].checkbox:checked::after {
+  /* Show a tick sign when the checkbox is checked */
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: white;
+}
+
+.checkbox-label {
+  /* Style the checkbox label */
+  margin-left: 8px;
+  user-select: none;
+}
+
+.todo-is-complete .text{
+  text-decoration: line-through  ;
+}
+
+/* .delete{ */
+  /* border-radius: 100%; */
+  /* width: 1.5rem; */
+  /* height:1.5rem; */
+  /* text-align: center; */
+  /* cursor: pointer; */
+/* } */
+
+/* .fa fa-trash{ */
+  /* margin-right: 2rem; */
+/* } */
+
+.delete:hover{
+  opacity: 0.8;
+}
+
+.input-container{
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+input{
+  padding:5%;
+  width:80%;
+  border-radius: 0.5rem;
+  border: none;
+  margin-right: 1rem;
+}
+
+button{
+  padding:5%;
+  border-radius: 0.5rem;
+  border:none;
+  cursor: pointer;
+}
